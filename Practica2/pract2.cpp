@@ -7,15 +7,34 @@
 
 
 int main(int argc, const char * argv[]) {
-    bool bool1 = false;
-    bool bool2 = false;
-    int a,b,s,r,m,d,e;
+    bool bool1=0;
+    bool bool2 =0;
+    int a,b,s,r,m,d,e,x,z,n,g;
     float aa,bb,ss;
     double aaa, bbb,sss;
     char char1, char2;
-    char y[1000];
+    char y[100], w[10];
     
-    printf("Introduzca dos numeros\n");
+    printf("Introduzca su nombre\n ");
+    scanf("%s",&y);
+
+    fflush stdin;
+     printf("Introduzca su estado de animo:(feliz,triste,enojado,motivado)\n");
+    scanf("%s",&w);
+    fflush (stdin);
+   
+	if(strcmp(w,"feliz")==0)
+    printf("\n\n!Sigue asi!,Que tenga un lindo dia\n");
+    else
+    if (strcmp(w,"triste")==0)
+    printf("\n\nYa no este triste, existen muchos motivos por los cuales sentirse mejor\n");
+	if (strcmp(w,"enojado")==0)
+    printf("\n\n¿Vale la pena estar enojado cuando usted puede mejorar su dia?¡¡Animo!!\n");
+    
+if(strcmp(w,"Motivado")==0)
+    printf("\n\nExcelente! ¡Vaya por todo!\n");
+    
+   printf("Introduzca dos numeros\n"); 
     scanf("%d%d",&a,&b);
     s=a+b;
     printf("La suma de los numeros es:%d\n",s);
@@ -147,6 +166,20 @@ int main(int argc, const char * argv[]) {
     else {
         printf("Falso\n");
     }
+    fflush stdin;
+    
+printf("Introduzca un valor\n");
+scanf("%d",&x);
+printf("Introduzca un valor\n");
+scanf("%d",&z);
+bool1=x<z;
+  if (bool1){
+  
+  printf( "%d<%d Verdadero.\n",x,z);}
+ else { 
+  printf("%d>%d Falso",x,z);
+ }
+
     
     return 0;
 }
