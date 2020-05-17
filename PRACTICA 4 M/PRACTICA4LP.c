@@ -23,13 +23,13 @@ int main(int argc, char *argv[]) {
 				case '-': r=num1-num2;
 					printf("\n\nLa resta de los n%cmeros es:\n%0.2f",163,r);
 					break;
-					case '*': m=num1*num2;
+				case '*': m=num1*num2;
 					printf("\n\nLa multiplicaci%cn de los n%cmeros es:\n%0.2f",162,163,m);
 					break;
-					case '/': d=num1/num2;
+				case '/': d=num1/num2;
 					printf("\n\nLa divisi%cn de los n%cmeros es:\n%0.2f",162,163,d);
 					break;
-					default: printf("\n\nOperci%cn no valida",162);
+				default: printf("\n\nOperci%cn no valida",162);
 					}
 	return 0;
 }
