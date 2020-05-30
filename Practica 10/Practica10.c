@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+//MVR
 /* ask the student information {studentid, fistname, firstlastname,
 secondlastname (optional), birthdate, school, grade, career,
 gender} to the user and store it in arrays. finally print the
