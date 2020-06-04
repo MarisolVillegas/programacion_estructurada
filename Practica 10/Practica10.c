@@ -9,8 +9,7 @@ records
 1.The user can capture as many students as he wants.
 2. format the strings using functions from String lib.
 3. Students with repeated studentsids are discarded.
-*/
-struct DatosEst{
+*/struct DatosEst{
 	long mat;
 	char nom[100];
 	char ap[100];
