@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-//Marisol Villegas Rincón 1898149
+//Marisol Villegas RincÃ³n 1898149
 /* 3.12 Pointers 1
 Reformat Structs exercice using functions with parameters
 {studentid, fistname, firstlastname, secondlastname (optional),
@@ -22,7 +22,7 @@ typedef char cad[' ']; //Variable global
     char carrera[50];
     char genero;
 };
-struct DatosEst alum[2], *ap;
+struct DatosEst alum[10], *ap;
 void datos_entrada(struct DatosEst *ap);
 void salida_datos(struct DatosEst *ap);
 int main(){
@@ -36,7 +36,7 @@ void datos_entrada(struct DatosEst *ap){
 	ap=&alum[0];
 	int i;
 	char r[' '];
-	for(i=0;i<2;i++){
+	for(i=0;i<10;i++){
 	printf("\nIntroduzca su matricula:\n");
 	fflush(stdin);
 	gets(r);
@@ -69,7 +69,7 @@ void salida_datos(struct DatosEst *ap){
 	int j;
 	system("cls");
 	printf("REPORTE DE ALUMNOS\n");
-	for(j=0;j<2;j++)
+	for(j=0;j<10;j++)
 	{
 		printf("\nAlumno #%i\n",j+1);
 		printf("\nMatricula: %ld ",ap->mat);
