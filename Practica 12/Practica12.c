@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-//Marisol Villegas RincÃ³n 1898149
+//Marisol Villegas Rincón 1898149
 /* 3.12 Pointers 1
 Reformat Structs exercice using functions with parameters
 {studentid, fistname, firstlastname, secondlastname (optional),
@@ -22,12 +22,80 @@ typedef char cad[' ']; //Variable global
     char carrera[50];
     char genero;
 };
-struct DatosEst alum[10], *ap;
+struct DatosEst alum[2], *ap;
 void datos_entrada(struct DatosEst *ap);
 void salida_datos(struct DatosEst *ap);
 int main(){
+datos_entrada(alum);
+salida_datos(alum);
+system("pause");
+int A=0,y;
+int gen,ma=0,fe=0;
+int li,lcc=0,mul=0,act=0,fis=0,mate=0,si=0;
+struct DatosEst st[10];
+	do {
+		printf("Introduza la cantidad de alumnos a registrar: ");
+		fflush(stdin);
+		scanf("%d",&y);
+		if(y<1 || y>10)
+			puts("Error,Introduzca una cantidad valida\n");	
+	} while(y<1 || y>10);
+	for(A=0;A<y;A++)
+	{
 	datos_entrada(alum);
-    salida_datos(alum);
+	do	{
+		printf("\nIntroduzca su Genero\nF.-Femenino\nM.-Msculino\n");
+			fflush(stdin);
+			gen=getche();
+			gen=toupper(gen);	
+				if(gen!='F'&& gen!= 'M'){
+					printf("\n\tDato erroneo\n Ingrese F o M\n");
+				}
+		}
+	while (gen!= 'F' && gen!='M');
+		switch(gen){
+		case 'F':fe++;
+		break;
+		case 'M':ma++;
+		break;}
+	do{
+		printf("\nLas Carreras disponibles: \n1)CIENCIAS COMPUTACIONALES\n2)MULTIMEDIA Y ANIMACION\n3)ACTUARIA\n4)FISICA\n5)MATEMATICAS\n6)SEGURIDAD EN TECNOLOGIAS\n");
+			fflush(stdin);
+			li=getche();
+			if(li<'1' || li>'6')
+				printf("\nError. Introduzca una opción valida");
+	}while (li<'1' || li>'6');
+		switch(li){
+		case '1': lcc++;
+		break;
+		case '2': mul++;
+		break;
+		case '3': act++;
+		break;
+		case '4': fis++;
+		break;
+		case '5': mate++;
+		break;
+		case '6': si++;
+		break;
+		case'7':
+		break;
+		}
+system("cls");
+	}
+	for(A=0;A<y;A++){
+	void salida_datos(struct DatosEst *ap);
+	}
+	printf("La cantidad de estudiantes ingresados son:%d\n",y);
+	printf("Alumnos con genero femenino:%d\n",fe);
+	printf("Alumnos con genero Masculino:%d\n",ma);
+	printf("Alumnos en la carrera de Ciencias Computacionales: %d\n",lcc);
+	printf("Alumnos en la carrera de Multimedia y animacion: %d\n",mul);
+	printf("Alumnos en la carrera de Actuaria: %d\n",act);
+	printf("Alumnos en la carrera de Fisica: %d\n",fis);
+	printf("Alumnos en la carrera de Matematicas %d\n",mate);
+	printf("Alumnos en la carrera de Seguridad en Tecnologias: %d\n",si);
+	puts("\n\n\n\n\n\n\n");
 	system("pause");
 	return 0;
 }
@@ -36,7 +104,7 @@ void datos_entrada(struct DatosEst *ap){
 	ap=&alum[0];
 	int i;
 	char r[' '];
-	for(i=0;i<10;i++){
+	for(i=0;i<2;i++){
 	printf("\nIntroduzca su matricula:\n");
 	fflush(stdin);
 	gets(r);
@@ -63,13 +131,14 @@ void datos_entrada(struct DatosEst *ap){
 	scanf("%c",&ap->genero);
 	ap++;
     }
+    return alum;
 }
 void salida_datos(struct DatosEst *ap){
 	ap=&alum[0];
 	int j;
 	system("cls");
 	printf("REPORTE DE ALUMNOS\n");
-	for(j=0;j<10;j++)
+	for(j=0;j<2;j++)
 	{
 		printf("\nAlumno #%i\n",j+1);
 		printf("\nMatricula: %ld ",ap->mat);
